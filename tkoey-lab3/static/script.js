@@ -48,19 +48,17 @@ function greetingFunc() {
     if (h<12 && h>=5) {
         greeting = "Good morning";
     }
-    else if (12<h<18) {
+    else if (12<h && h<18) {
         greeting = "Good afternoon";
     }
-    else if (18<h<20) {
+    else if (18<h && h<20) {
         greeting = "Good evening";
     }
     else {
         greeting = "Good night";
     }
-    console.log(greeting);
 
-    if (window.location.href.includes("index.html")) {
-        document.getElementbyId("greeting").innerHTML = greeting;
-    }
+    let E = document.getElementById("greeting");
+    E.innerHTML = greeting + ", I am Takeshi Koey";
 }
 greetingFunc();
