@@ -95,11 +95,10 @@ document.addEventListener("DOMContentLoaded", function () {
     const form = document.getElementById("contactForm");
 
     form.addEventListener("submit", function (event) {
-        event.preventDefault(); // Prevent default form submission
+        event.preventDefault(); 
         
         let isValid = true;
 
-        // Get form fields
         const nameField = document.getElementsByName("name")[0];
         const emailField = document.getElementsByName("email")[0];
         const commentField = document.getElementsByName("comment")[0];
