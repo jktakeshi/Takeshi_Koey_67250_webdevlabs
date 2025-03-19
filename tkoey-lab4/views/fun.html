@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="../static/style.css">
     <script defer src="../static/script.js" ></script>
 </head>
-<body>
+<body onload="addYear()">
     <header style="color: blue; background: lightblue">
         <h1 id="webname">Takeshi Koey</h1>
         <nav>
@@ -26,7 +26,8 @@
 
     <h2>Things I love to do for fun</h2>
 
-    <ul>
+    <button id="showButton" onclick="showList()">Click to See...</button>
+    <ul id="funList" style="display: none;">
         <li>Cooking with friends</li>
         <li>Ball sports like tennis, volleyball, and basketball</li>
         <li>Traveling</li>
@@ -35,7 +36,8 @@
 
 
     <footer>
-        <p>&copy; 2025 designed &#129504; and coded &#128640; by Takeshi Koey</p>
+        <!-- <p>&copy; 2025 designed &#129504; and coded &#128640; by Takeshi Koey</p> -->
+        <p id="copyYear"></p>
     </footer>
 </body>
 </html>

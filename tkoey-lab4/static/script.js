@@ -61,3 +61,32 @@ function greetingFunc() {
     E.innerHTML = greeting + ", I am Takeshi Koey";
 }
 greetingFunc();
+
+function addYear() {
+    var y = new Date().getFullYear();
+    let year = document.getElementById("copyYear")
+    year.innerHTML = '&copy; ' + y + ' designed &#129504; and coded &#128640; by Takeshi Koey';
+}
+addYear();
+
+function showList() {
+    document.getElementById("funList").style.display = "block";
+    document.getElementById("showButton").style.display = "none";
+}
+
+$(document).ready(function () {
+    // Read More / Read Less Toggle Functionality
+    $("#readMore").click(function () {
+        $("#shortBio").hide();  // Hide short bio
+        $("#longBio").show();   // Show long bio
+        $("#readMore").hide();  // Hide "Read More" button
+        $("#readLess").show();  // Show "Read Less" button
+    });
+
+    $("#readLess").click(function () {
+        $("#shortBio").show();  // Show short bio
+        $("#longBio").hide();   // Hide long bio
+        $("#readMore").show();  // Show "Read More" button
+        $("#readLess").hide();  // Hide "Read Less" button
+    });
+});

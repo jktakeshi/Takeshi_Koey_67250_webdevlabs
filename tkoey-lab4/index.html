@@ -11,9 +11,11 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="static/style.css">
+    <!-- <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script> -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script defer src="./static/script.js"></script>
 </head>
-<body>
+<body onload="addYear()">
     <header style="color: blue; background: lightblue">
         <h1 id="webname">Takeshi Koey</h1>
         <nav>
@@ -27,13 +29,20 @@
     <div>
         <h2 id="greeting">Hi, my name is Takeshi Koey</h2>
         <img src="static/profile.JPG" alt="Profile Picture" width="200" height="300">
-        <p id="intro">
+        <p id="shortBio">
             Welcome to my personal portfolio! I am an undergraduate at Carnegie Mellon University majoring in Information Systems.
         </p>
+        <p id="longBio" style="display: none;">
+            Welcome to my personal portfolio! I am an undergraduate at Carnegie Mellon University majoring in Information Systems.
+            I am interested in web and app development.
+        </p>
+        <button id="readMore">Read More</button>
+        <button id="readLess" style="display: none;">Read Less</button>
     </div>
     
     <footer>
-        <p>&copy; 2025 designed &#129504; and coded &#128640; by Takeshi Koey</p>
+        <!-- <p>&copy; 2025 designed &#129504; and coded &#128640; by Takeshi Koey</p> -->
+        <p id="copyYear"></p>
     </footer>
 </body>
 </html>
