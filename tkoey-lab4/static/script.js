@@ -90,3 +90,58 @@ $(document).ready(function () {
         $("#readLess").hide();  // Hide "Read Less" button
     });
 });
+
+document.addEventListener("DOMContentLoaded", function () {
+    const form = document.getElementById("contactForm");
+
+    form.addEventListener("submit", function (event) {
+        event.preventDefault(); // Prevent default form submission
+        
+        let isValid = true;
+
+        // Get form fields
+        const nameField = document.getElementsByName("name")[0];
+        const emailField = document.getElementsByName("email")[0];
+        const commentField = document.getElementsByName("comment")[0];
+
+        // Remove existing validation messages
+        document.querySelectorAll(".error-message").forEach(msg => msg.remove());
+
+        // Validate Name Field
+        if (!nameField.value.trim()) {
+            showError(nameField, "Please enter your name.");
+            isValid = false;
+        }
+
+        // Validate Email Field
+        if (!emailField.value.trim()) {
+            showError(emailField, "Please enter your email.");
+            isValid = false;
+        } else if (!emailField.checkValidity()) {
+            showError(emailField, "Please enter a valid email address.");
+            isValid = false;
+        }
+
+        // Validate Comment Field
+        if (!commentField.value.trim()) {
+            showError(commentField, "Please enter a comment.");
+            isValid = false;
+        }
+
+        // Submit form if valid
+        if (isValid) {
+            alert("Form submitted successfully!");
+            form.submit(); 
+        }
+    });
+
+    // Function to show validation messages
+    function showError(inputField, message) {
+        const errorMsg = document.createElement("p");
+        errorMsg.className = "error-message";
+        errorMsg.style.color = "red";
+        errorMsg.style.fontSize = "0.9em";
+        errorMsg.textContent = message;
+        inputField.insertAdjacentElement("afterend", errorMsg);
+    }
+});
