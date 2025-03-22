@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="author" content="Takeshi Koey">
+    <meta name="keywords" content="Carnegie Mellon University, Information Systems">
+    <meta name="description" content="Takeshi Koey professional website">
+    <title>Contact Me</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../static/style.css">
+    <script defer src="../static/script.js"></script>
+</head>
+<body onload="addYear()">
+    <header style="color: blue; background: lightblue">
+        <h1 id="webname">Takeshi Koey</h1>
+        <nav>
+            <a href="../index.html" class="nav-link">Home</a> |
+            <a href="cv.html" class="nav-link">CV</a> |
+            <a href="contact.html" class="nav-link">Contact Me</a> |
+            <a href="fun.html" class="nav-link">For Fun</a> |
+        </nav>
+    </header>
+
+    <h2>Contact Me</h2>
+
+    <form>
+        <label>Your name (required): </label>
+        <input type="text" name="name" required> <br><br>
+        <label>Your email: </label>
+        <input type="email" name="email" required> <br><br>
+        <label>Your comment:</label>
+        <textarea name="comment" rows="20" cols="60" required></textarea>
+        <button type="submit">SEND</button>
+    </form>
+    <p id="ValidateMsg"></p>
+
+    <h3>Contact Method Description</h3>
+    <table border="1">
+        <tr>
+            <th>Method</th>
+            <th>Details</th>
+        </tr>
+        <tr>
+            <td>Email</td>
+            <td align="center">jktakeshi@gmail.com</td>
+        </tr>
+        <tr>
+            <td>Phone</td>
+            <td align="center">+4126085677</td>
+        </tr>
+        <tr>
+            <td>LinkedIn</td>
+            <td align="center"><a href="https://www.linkedin.com/in/takeshi-koey/">My LinkedIn</a></td>
+        </tr>
+    </table>
+    
+
+    <footer>
+        <p id="copyYear"></p>
+    </footer>
+</body>
+</html>
