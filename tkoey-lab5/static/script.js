@@ -116,3 +116,14 @@ function getAdvice() {
             document.getElementById("adviceText").innerText = "Oops! Something went wrong. Try again"
         })
 }
+
+function initPage() {
+    addYear();
+    if (window.location.href.includes("contact.html")) {
+        document.getElementById("item2")?.addEventListener("submit", function(event) {
+            event.preventDefault();
+            validate();
+        })
+        initMap();
+    } 
+}
