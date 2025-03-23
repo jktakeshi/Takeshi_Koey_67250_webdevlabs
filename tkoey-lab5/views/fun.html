@@ -24,16 +24,40 @@
         </nav>
     </header>
 
-    <h2>Things I love to do for fun</h2>
+    <div class="main">
+        <div class="item1">
+            <h2>Things I love to do for fun</h2>
+            <!-- <button id="showButton" onclick="showList()">Click to See...</button> -->
+            <ul id="FavList" style="display: none;">
+                <li>Cooking with friends</li>
+                <li>Ball sports like tennis, volleyball, and basketball</li>
+                <li>Traveling</li>
+                <li>Trying new things!</li>
+            </ul>
+        </div>
+        <div class="item2">
+            <img src="../static/fun-image.jpg" class="funIMG">
+        </div>
+        <div class="item3">
+            <iframe width="560" height="315" 
+                src="https://www.youtube.com/embed/9egr-dLvnJQ?si=bBr1Z1GzZ8VGZCmG" 
+                title="YouTube video player" 
+                frameborder="0" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                referrerpolicy="strict-origin-when-cross-origin" 
+                allowfullscreen>
+            </iframe>
+        </div>
+        <div class="item4">
+            <div class="container">
+                <h2>Need Some Advice?</h2>
+                <p id="adviceText">Click the button to get a random piece of advice!</p>
+                <button onclick="getAdvice()">Get Advice</button>
+            </div>
+        </div>
+    </div>
 
-    <button id="showButton" onclick="showList()">Click to See...</button>
-    <ul id="funList" style="display: none;">
-        <li>Cooking with friends</li>
-        <li>Ball sports like tennis, volleyball, and basketball</li>
-        <li>Traveling</li>
-        <li>Trying new things!</li>
-    </ul>
-
+    
 
     <footer>
         <!-- <p>&copy; 2025 designed &#129504; and coded &#128640; by Takeshi Koey</p> -->

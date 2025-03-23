@@ -69,10 +69,10 @@ function addYear() {
 }
 addYear();
 
-function showList() {
-    document.getElementById("funList").style.display = "block";
-    document.getElementById("showButton").style.display = "none";
-}
+// function showList() {
+//     document.getElementById("funList").style.display = "block";
+//     document.getElementById("showButton").style.display = "none";
+// }
 
 $(document).ready(function () {
     // Read More / Read Less Toggle Functionality
@@ -105,3 +105,14 @@ function validate() {
     }
 }
 
+function getAdvice() {
+    fetch("https://api.adviceslip.com/advice")
+        .then(response => response.json())
+        .then(data => {
+            document.getElementById("adviceText").innerText = data.slip.advice;
+        })
+        .catch(error => {
+            console.error("Error fetching advice:", error);
+            document.getElementById("adviceText").innerText = "Oops! Something went wrong. Try again"
+        })
+}
