@@ -69,10 +69,6 @@ function addYear() {
 }
 addYear();
 
-// function showList() {
-//     document.getElementById("funList").style.display = "block";
-//     document.getElementById("showButton").style.display = "none";
-// }
 
 $(document).ready(function () {
     // Read More / Read Less Toggle Functionality
